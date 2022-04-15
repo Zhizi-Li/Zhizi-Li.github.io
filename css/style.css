@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@500&display=swap');
+
+/* Type Selectors (General)*/
+body {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-size: 18px;
+  color: #000;
+}
+
+a,
+a:link {
+  color: rgb(87, 84, 192);
+}
+
+a:visited {
+  color: #444; /* contrast ratio: 9.73:1 */
+}
+
+a:hover {
+  background-color: rgba(255, 252, 112, 0.5); /* yellow */
+}
+
+a:active {
+  color: rgb(233,80,58);
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Roboto Serif", serif;
+  font-weight: 500;
+  color: rgb(30, 144, 255); /* blue */
+}
+
+p {
+  max-width: 60ch;
+}
+
+p, li {
+  line-height: 1.5;
+}
+
+ul > li {
+  list-style-type: square;
+}
+
+abbr[title] {
+  text-decoration-color: rgb(30, 144, 255); /* blue */
+  text-decoration-style: wavy;
+}
+
+/* Type selectors (Structural) */
+nav a {
+  color: rgb(69, 105, 159);
+}
+
+section {
+  margin-bottom: 16px;
+  padding: 16px;
+  background-color: rgba(255,228,181,0.5);
+}
+
+/*
+aside > p {
+  font-style: italic;
+}
+*/
+
+/*
+footer a {
+  color: #666;
+}
+*/
+
+/* id selectors */
+#box {
+  background-color: rgba(255, 218, 185, 0.5);
+  width: 700px;
+  height: 600px;
+  overflow: auto;
+  border: 1px dashed rgb(30, 144, 255); /* blue */
+}
+
+#box {
+  font-size: 19px;
+  color: #333;
+}
+
+/* class selectors */
+.first {
+  font-weight: bold;
+}
+
+.first::first-letter {
+  font-size: 23px;
+}
