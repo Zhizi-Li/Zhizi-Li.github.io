@@ -4,13 +4,17 @@
 /* Type Selectors (General)*/
 body {
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-  font-size: 18px;
   color: #000;
+  max-width: 960px;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 20px;
 }
 
 a,
 a:link {
-  color: rgb(87, 84, 192);
+  color: rgb(19, 52, 99); /* contrast ratio: 8.78:1 */
 }
 
 a:visited {
@@ -22,7 +26,7 @@ a:hover {
 }
 
 a:active {
-  color: rgb(233,80,58);
+  color: rgb(233,80,58); /* red 3.7:1 */
 }
 
 h1,
@@ -30,15 +34,19 @@ h2,
 h3 {
   font-family: "Roboto Serif", serif;
   font-weight: 500;
-  color: rgb(30, 144, 255); /* blue */
+  color: rgb(19, 52, 99); /* blue contrast ratio: 12.35:1 */
+  margin: 20px;
 }
 
 p {
   max-width: 60ch;
+  letter-spacing: 1.25px;
+  word-spacing: 1px;
 }
 
 p, li {
   line-height: 1.5;
+  font-size: 18px;
 }
 
 ul > li {
@@ -50,41 +58,84 @@ abbr[title] {
   text-decoration-style: wavy;
 }
 
+header,
+footer {
+  padding-left: 15px;
+  grid-column: 1 / -1;
+}
+
+header,
+nav,
+footer {
+  background-color: #eee;
+}
+
+
 /* Type selectors (Structural) */
 nav a {
   color: rgb(69, 105, 159);
 }
 
+nav p {
+  margin-left: 20px;
+}
+
 section {
-  margin-bottom: 16px;
-  padding: 16px;
-  background-color: rgba(255,228,181,0.5);
+  padding: 20px;
 }
 
-/*
-aside > p {
-  font-style: italic;
+section p {
+  margin: 20px;
 }
-*/
 
-/*
-footer a {
-  color: #666;
+table {
+  padding: 20px;
 }
-*/
+
+td {
+  text-align: right;
+}
+
+img {
+  border: 1px dashed rgb(2, 8, 115); /* blue */
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  grid-template-areas:
+    "introduction introduction"
+    "people-and-society     economy";
+}
 
 /* id selectors */
-#box {
-  background-color: rgba(255, 218, 185, 0.5);
-  width: 700px;
-  height: 600px;
-  overflow: auto;
-  border: 1px dashed rgb(30, 144, 255); /* blue */
+#introduction {
+  font-size: 18px;
+  color: #333;
 }
 
-#box {
-  font-size: 19px;
-  color: #333;
+#introduction {
+  background-color: rgba(255, 241, 118, 0.5);
+  width: 600px;
+  height: 300px;
+  text-align: left;
+  border: 3px dotted rgb(2, 8, 115); /* blue */
+  overflow: auto;
+  grid-area: introduction;
+}
+
+#people-and-society {
+  grid-area: people and society;
+  background-color: rgba(126, 206, 253,0.5);
+}
+
+#economy {
+  grid-area: economy;
+  background-color: rgba(126, 206, 253,0.5);
+  padding: 20px;
 }
 
 /* class selectors */
