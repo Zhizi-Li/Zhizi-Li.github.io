@@ -129,10 +129,6 @@ img {
   height: auto;
 }
 
-.bg-blue {
-  background-color: rgba(116, 202, 253, 0.5);
-}
-
 .grid-1-1 {
   display: grid;
   grid-template-columns: 1fr 1fr;
