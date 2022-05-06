@@ -7,7 +7,6 @@ body {
   max-width: 960px;
   margin: 20px auto;
   display: grid;
-  grid-template-columns: 1fr 2fr;
   grid-gap: 20px;
 }
 
@@ -50,25 +49,15 @@ p, li {
 }
 
 ul {
-  list-style-type: square;
-}
+  margin: 0;
+  list-style-type: none;
+  padding-left: 0;
+  min-height: 45px;
 
-table,th,td {
-  padding: 5px;
-  table-layout: auto;
-  width: 100px;
-  border: 1px solid;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-
-td {
-  text-align: right;
-}
-
-abbr[title] {
-  text-decoration-color: rgb(30, 144, 255); /* blue */
-  text-decoration-style: wavy;
-}
-
 
 header,
 footer {
@@ -86,8 +75,9 @@ nav a {
   color: rgb(69, 105, 159);
 }
 
-nav p {
-  margin-left: 20px;
+nav{
+  padding: 0 15px;
+
 }
 
 section {
@@ -96,43 +86,33 @@ section {
 
 section p {
   margin: 20px;
+  font-size: 16px;
 }
 
 img {
-  border: 2px solid rgb(2, 8, 115); /* blue */
+  border: 2px solid rgb(96, 96, 96);
   height: 100%;
   width: 100%;
 }
 
-main {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 20px;
-  grid-template-areas:
-    "introduction introduction"
-    "people-and-society     economy";
-}
-
 /* id selectors */
-#introduction {
-  background-color: rgba(116, 202, 253, 0.5);
-  width: 600px;
-  height: 300px;
+#travel {
   text-align: left;
-  border: 3px dotted rgb(2, 8, 115); /* blue */
+  border: 3px solid rgb(96, 96, 96); /* blue */
   overflow: auto;
-  grid-area: introduction;
 }
 
-#people-and-society {
-  grid-area: people and society;
-  background-color: rgba(58, 180, 252,0.5);
+#favorite-city {
+  border: 3px solid rgb(96, 96, 96); /* blue */
 }
 
-#economy {
-  grid-area: economy;
-  background-color: rgba(58, 180, 252,0.5);
-  padding: 20px;
+#story {
+  margin: 0 0 20px 0;
+  background-color: rgba(102, 178, 255, 0.5);
+}
+
+#travel, #favorite-city, #attractions, #food {
+  background-color: rgba(116, 202, 253, 0.5);
 }
 
 /* class selectors */
@@ -142,4 +122,25 @@ main {
 
 .first::first-letter {
   font-size: 25px;
+}
+
+.img-cls {
+  max-width: 100%;
+  height: auto;
+}
+
+.bg-blue {
+  background-color: rgba(116, 202, 253, 0.5);
+}
+
+.grid-1-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.grid-1-2 {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 20px;
 }
